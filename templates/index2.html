@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        fieldset {
+            width: 400px;
+            height: 550px;
+            background-color: #eeeeee;
+        }
+
+        legend {
+            background-color: rgb(2, 140, 253);
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        body {
+            text-align: center;
+            height: 80px;
+            background-image: url('/static/index1.jpg');
+            background-repeat: no-repeat;
+            background-size: 1550px 750px;
+        }
+
+        div.form {
+            display: block;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .center {
+            margin: left;
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form name="form1">
+            <fieldset>
+                <center>
+                    <h1>Loan Status Predictor</h1>
+                </center>
+                <div class="center">
+                    <label for="loan">Loan Id:</label>
+                    <input type="text" id="loanid" name="loanid"><br><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Married</legend>
+                    <input type="radio" id="bol" name="bol" value="1">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="bol" name="bol" value="0">
+                    <label for="no">No</label><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Graduated</legend>
+                    <input type="radio" id="binary" name="binary" value="1">
+                    <label for="done">Yes</label><br>
+                    <input type="radio" id="binary" name="binary" value="0">
+                    <label for="not">No</label><br>
+                </div>
+                <div class="center">
+                    <label for="income">Your Monthly Income:</label>
+                    <input type="number" id="income" name="income"><br><br>
+                </div>
+                <div class="center">
+                    <label for="loan">Loan Amount:</label>
+                    <input type="number" id="loanamount" name="loanamount"><br><br>
+                </div>
+                <div class="center">
+                    <label for="period">Loan period(in days):</label>
+                    <input type="number" id="period" name="period"><br><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Credit Score</legend>
+                    <input type="radio" id="range" name="range" value="1">
+                    <label for="above">Above 700</label><br>
+                    <input type="radio" id="range" name="range" value="0">
+                    <label for="below">Below 700</label><br>
+                </div>
+                <center><input type="submit" value="Submit"></center>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+    <h1><b>{{variable}}</b></h1>
+</body>
+
+</html>

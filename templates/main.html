@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}User Type{% endblock title %}
+
+{% block body %}
+<style>
+    div.heady{
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+
+
+<div class="container my-3">
+    <h1 class="mb-3 text-center">Loan Prediction System</h1>
+    <h2 class="my-4 text-center"><i><small class="text-muted">Select User type</small></i></h2>
+    <div class="row">
+
+        <div class="col-sm-4 py-2">
+            <div class="card card-body h-100">
+                <img src="/static/applicant.jpg" class="d-block w-100" alt="..." width="500" height="250">
+                <div class="card-body">
+                    <p><div class="heady"><h5>Applicant</h5></div>You can check the status of your loan here. Click on predict to proceed. <br><br><br> </p>
+                    <p class="card-text"></p>
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group text-center">
+                            <button onclick="location.href='/index1'" class="btn btn-sm btn-outline-secondary">Predict</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 py-2">
+            <div class="card card-body h-100">
+                <img src="/static/employee.jpg" class="d-block w-100" alt="..." width="500" height="250">
+                <div class="card-body">
+                    <p><div class="heady"><h5>Employee</h5></div>You can check status of an Applicant & save the results in the data. Please click on login to proceed. <br><br></p>
+                    <p class="card-text"></p>
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group text-center">
+                            <button onclick="location.href='/accounts/login'" class="btn btn-sm btn-outline-secondary text-center">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 py-2">
+            <div class="card card-body h-100">
+                <img src="/static/admin.jpg" class="d-block w-100" alt="..." width="500" height="250">
+                <div class="card-body">
+                    <p><div class="heady"><h5>Admin</h5></div>You can add one or more employees & can allow them to access employee section. You can enjoy many more priveliges. Please login to continue.</p>
+                    <p class="card-text"></p>
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group text-center">
+                            <button onclick="location.href='/admin'" class="btn btn-sm btn-outline-secondary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock body %}
